@@ -429,6 +429,67 @@ STYLE BUSINESS CSS
 }
 
 /*
+STYLE USE CSS
+*/
+.use{
+    background: #ceeed6;
+}
+.use__container{
+    padding: 3rem 6rem 6rem 6rem;
+    position: relative;
+}
+.use__images{
+    position: relative;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    margin-bottom: 6rem;
+}
+.use__images img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.use__content{
+    position: absolute;
+    width: 600px;
+    height: 180px;
+    right: 30%;
+    bottom: 70px;
+    background-color: #0e9d80;
+    color: #f1f1f1;
+    padding: 15px;
+    border-radius: 5px;
+}
+.use__content h3{
+    font-size: 1.5rem;
+}
+.use__content p{
+    font-size: 1.1rem;
+}
+@media screen and (max-width: 760px){
+    .use__container{
+        padding: 3rem 1rem 12rem 1rem;
+    }
+    .use__content{
+        width: 400px;
+        height: 200px;
+        right: 8px;
+        bottom: 40px;
+    }
+}
+@media screen and (max-width: 390px){
+    
+    .use__content{
+        width: 360px;
+        height: 220px;
+        right: 8px;
+        bottom: 40px;
+    }
+}
+/*
 
 STYLE FOOTER CSS
 
@@ -438,6 +499,6 @@ STYLE FOOTER CSS
     background-color: #212e36;
 }
 .footer p{
-    color: #a8ecdd;
+    color: #939494;
     text-align: center;
 }   
