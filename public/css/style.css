@@ -11,7 +11,15 @@
     --color-dos: #0b6320,
     --color-tres: rgba(15, 119, 103, 0.8)
 }
-
+.title-h2{
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    background-color: #212e36;
+    background-image: linear-gradient(to top, #a8ecdd 5%,#0b6320 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
 .icons{
     position: fixed;
     right: 1rem;
@@ -70,7 +78,11 @@ STYLE NAVBAR CSS
     justify-content: center;
     align-items: center;
 }
-
+@media screen and (max-width: 760px){
+    .navbar__logo img{
+        width: 80px;
+    }
+}
 .navbar__menu{
     display: flex;
     justify-content: center;
@@ -107,6 +119,9 @@ STYLE NAVBAR CSS
     .navbar__toggle{
         display: block;
         cursor: pointer;
+    }
+    .navbar__items{
+        width: 100vw;
     }
     .bar{
         height: 3px;
@@ -261,14 +276,6 @@ STYLE BENEFICIOS CSS
 .beneficios__content{
     width: 50%;
 }
-.beneficios__content h2{
-    font-size: 2.8rem;
-    margin-bottom: 1rem;
-    background-color: #212e36;
-    background-image: linear-gradient(to top, #a8ecdd 5%,#0b6320 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 .beneficios__description li{
     padding: 5px 0;
     color: #212e36;
@@ -359,6 +366,68 @@ STYLE PRODUCT CSS
         bottom: 20px;
     }
 }
+
+/*
+STYLE BUSINESS CSS
+*/
+.business{
+    height: 80vh;
+    width: 100%;
+    background-image: url('../images/banner/empresa.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.transparent-bg{
+    height: 100%;
+    width: 100%;
+    background: rgba(15, 119, 103, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.business__container{
+    padding: 3rem 6rem;
+    background-color: rgba(250, 248, 248, 0.4);
+}
+.business__content{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.business__card-info{
+    width: 50%;
+    padding: 10px;
+}
+
+.business__card-info h2{
+    color: #212e36;
+    font-size: 1.5rem;
+}
+.business__card-info p{
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 760px){
+    .business{
+        height: 100%;
+        width: 100%;
+    }
+    .business__container{
+        padding: 4rem 1rem ;
+    }
+    .business__card-info{
+        width: 100%;
+    }
+    .business__content{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
 /*
 
 STYLE FOOTER CSS
