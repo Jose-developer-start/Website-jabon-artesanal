@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+:root{
+    --color-uno: #0e9d80,
+    --color-dos: #0b6320,
+    --color-tres: rgba(15, 119, 103, 0.8)
+}
+
+.icons{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 2;
+    -webkit-animation: vibration 5s infinite;
+    animation: vibration 5s infinite;
+}
+@keyframes vibration {
+
+    0%{
+        height: 30px;
+    }
+    25%{
+        height: 40px;
+    }
+    
+    50%{
+        height: 50px;
+    }
+    
+    75%{
+        height: 40px;
+    }
+    
+    100%{
+        height: 30px;
+    }
+}
+/*
+
+STYLE NAVBAR CSS
+
+*/
+.navbar__container{
+    padding: 0 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #212e36;
+    height: 80px;
+    z-index: 99;
+}
+
+.navbar__logo{
+    font-size: 1.5rem;
+    color: #f1f1f1;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar__menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar__items{
+    height: 80px;
+}
+
+.navbar__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+.navbar__link:hover{
+    color: #7be980;
+}
+
+@media screen and (max-width: 760px){
+    .navbar__container{
+        padding: 0 1rem;
+    }
+    .navbar__logo{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    .navbar__toggle{
+        display: block;
+        cursor: pointer;
+    }
+    .bar{
+        height: 3px;
+        width: 25px;
+        background-color: #f1f1f1;
+        margin: 5px auto;
+    }
+    .navbar__menu{
+        display: grid;
+        grid-template-columns: auto;
+        position: absolute;
+        width: 100%;
+        top: -100000px;
+        left: 0;
+        background-color: #212e36;
+        opacity: 1;
+        z-index: 99;
+        transition: all 0.5s ease;
+    }
+    .navbar__link{
+        width: 100%;
+    }
+    .navbar__menu.active{
+        top: 80px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #mobile__menu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    #mobile__menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile__menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/*
+
+END STYLE NAVBAR CSS
+
+*/
+
+/*
+
+END STYLE HEADER CSS
+
+*/
+.header{
+    background: url('../images/productos/image4.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: initial;
+}
+.header__transparent-bg{
+    background: rgba(15, 119, 103, 0.8);
+}
+.header__container{
+    padding: 0 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 600px;
+    width: 100%;
+}
+.header__content{
+    width: 50%;
+}
+.header__content h1{
+    font-size: 2.8rem;
+    background-color: #212e36;
+    background-image: linear-gradient(to top, #a8ecdd 0%,#79cc8c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header__content h2{
+    font-size: 1.2rem;
+    color: #f1f1f1;
+}
+
+.header__img-container img{
+    width: 500px;
+}
+@media screen and (max-width: 760px){
+    .header__container{
+        flex-direction: column;
+        padding: 2rem 1rem;
+        height: 80vh;
+    }
+    .header__content{
+        width: 100%;
+    }
+    .header__content h1{
+        font-size: 2.3rem;
+        margin-bottom: 1rem;
+    }
+    .header__content h2{
+        font-size: 1.2rem;
+    }
+    .header__img-container img{
+        width: 390px;
+        border-radius: 5px;
+    }
+}
+@media screen and (max-width: 380px){
+    .header__container{
+        height: 100vh;
+    }
+    .header__content{
+        width: 100%;
+    }
+    .header__content h1{
+        font-size: 2.3rem;
+        margin-bottom: 1rem;
+    }
+    .header__content h2{
+        font-size: 1.2rem;
+    }
+    .header__img-container img{
+        width: 340px;
+        border-radius: 5px;
+    }
+}
+/*
+
+STYLE BENEFICIOS CSS
+*/
+.beneficios{
+    padding: 3rem 6rem;
+    background: #d2dbd8;
+}
+.beneficios__container{
+    display: flex;
+    justify-content: space-around;
+
+}
+.beneficios__img{
+    height: 400px;
+    width: 400px;
+    position: relative;
+}
+
+.beneficios__img img{
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.beneficios__content{
+    width: 50%;
+}
+.beneficios__content h2{
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    background-color: #212e36;
+    background-image: linear-gradient(to top, #a8ecdd 5%,#0b6320 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.beneficios__description li{
+    padding: 5px 0;
+    color: #212e36;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 760px){
+    .beneficios{
+        padding: 2rem 1rem;
+    }
+    .beneficios__container{
+        flex-direction: column;
+    }
+    .beneficios__img{
+        height: 300px;
+        width: 100%;
+    }
+    .beneficios__content{
+        width: 100%;
+    }
+    .beneficios__content h2{
+        font-size: 2.2rem;
+        margin: 10px 0px;
+        margin-bottom: 1rem;
+        background-color: #212e36;
+        background-image: linear-gradient(to top, #53b6a0 5%,#0b6320 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .beneficios__description{
+        padding: 0px 1.5rem;
+    }
+
+}
+@media screen and (max-width: 380px){
+
+}
+/**
+
+STYLE PRODUCT CSS
+
+*/.product{
+    background: #00FFFF;
+}
+.product__container{
+    padding: 3rem 6rem;
+}
+
+.product__content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product__img{
+    height: 600px;
+    border-radius: 5px;
+}
+.product__price{
+    position: absolute;
+    padding: 1rem;
+    right: 150px;
+    height: 250px;
+    width: 300px;
+    background: #0e9d80;
+    box-shadow: 0px 0px 15px rgba(15, 119, 103, 0.8);
+    border-radius: 5px;
+    color: #00FFFF;
+}
+.product__price span{
+    font-size: 1.8rem;
+}
+@media screen and (max-width: 760px){
+    .product__container{
+        padding: 2rem 1rem;
+    }
+    .product__price{
+        right: 30px;
+        bottom: 10px;
+    }
+    .product__img{
+        height: 500px;
+    }
+}
+@media screen and (max-width: 380px){
+    .product__price{
+        right: 20px;
+        bottom: 20px;
+    }
+}
+/*
+
+STYLE FOOTER CSS
+
+*/
+.footer__container{
+    padding: 3rem 6rem;
+    background-color: #212e36;
+}
+.footer p{
+    color: #a8ecdd;
+    text-align: center;
+}   
